@@ -8,6 +8,7 @@
     <ProgressBar
         android:layout_width="100dp"
         android:layout_height="110dp"
+        android:indeterminateDrawable="@drawable/page_loading"
         style="?android:progressBarStyleInverse"
         />
 

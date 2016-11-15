@@ -35,6 +35,8 @@ public abstract class LoadingPager extends FrameLayout {
     //当前状态
     private int state_current = STATE_LOADING;
 
+    private Context mContext;
+
     //提供四种不同的界面
     private View loadingView;
     private View errorView;
@@ -52,6 +54,8 @@ public abstract class LoadingPager extends FrameLayout {
 
     public LoadingPager(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        mContext = context;
+
         //构造器的初始化方法中根据当前的状态，加载不同的界面显示
         init();
     }
@@ -105,7 +109,8 @@ public abstract class LoadingPager extends FrameLayout {
         emptyView.setVisibility(state_current == STATE_EMPTY ? View.VISIBLE : View.GONE);
 
         if (successView == null) {
-            successView = UIUtils.getView(layoutId());
+//            successView = UIUtils.getView(layoutId());
+            successView = View.inflate(mContext,layoutId(),null);
             addView(successView);
         }
         successView.setVisibility(state_current == STATE_SUCCESS ? View.VISIBLE : View.GONE);

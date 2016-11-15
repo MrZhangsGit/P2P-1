@@ -141,7 +141,8 @@ public class HomeFrangment extends BaseFragment {
                             //睡眠-模拟进度
                             SystemClock.sleep(30);
 
-                            roundProgress.postInvalidate();
+//                            roundProgress.invalidate();//强制重绘（只能主线程可以用）
+                            roundProgress.postInvalidate();//强制重绘（主/分线程都可以）
                         }
                     }
                 }).start();

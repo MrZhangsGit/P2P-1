@@ -55,8 +55,9 @@ public class MyScrollView extends ScrollView {
 
     /**
      * 事件拦截
+     *
      * @param ev
-     * @return  如果返回值为true，表示拦截子视图的处理。如果返回false，表示不拦截
+     * @return 如果返回值为true，表示拦截子视图的处理。如果返回false，表示不拦截
      */
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
@@ -168,13 +169,15 @@ public class MyScrollView extends ScrollView {
         Log.e("TAG", "childViewHeight = " + childViewHeight + ",displayHeight = " + displayHeight);
 
         //获取两者的距离差
-        int distanceHeight = childViewHeight - displayHeight;
+        int distanceHeight = childViewHeight - displayHeight;//此距离为ScrollView本身滑动的距离，就是上啦下拉超出的距离
 
         //获取当前视图在y轴方向上移动的位移 (最初：0.上移：+，下移：-)
-        int scrollY = this.getScrollY();
+        int scrollY = this.getScrollY();//此滑动是ScrollView本身（内部唯一子控件）相对屏幕滑动的距离
+
+        Log.e("TAG", "scrollY---" + scrollY + "displayHeight---" + distanceHeight);
 
         //比较判断
-        if (scrollY <= 0 || scrollY >= displayHeight) {
+        if (scrollY <= 0 || scrollY >= distanceHeight) {
             return true;//下拉小于0 拉过头部  上啦大于差距  拉出下边界  因此返回true  需要滑动
         }
 
