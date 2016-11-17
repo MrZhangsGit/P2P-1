@@ -1,15 +1,88 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.atguigu.p2pinvest.fragment.ProductHotFragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.atguigu.p2pinvest.ui.FlowLayout
+        android:id="@+id/flow_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="热门理财"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="30sp" />
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple">
 
-</FrameLayout>
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="长恨歌"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="同一首歌"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="爱"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="难忘今宵"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="最后一首歌"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="see you tomorrow"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="五环之歌"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="问"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="明天你要嫁给我"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="北京欢迎你"-->
+        <!--android:textSize="20sp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+
+
+    </com.atguigu.p2pinvest.ui.FlowLayout>
+
+
+</LinearLayout>

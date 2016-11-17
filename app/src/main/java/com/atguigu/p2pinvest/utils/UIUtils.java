@@ -67,4 +67,5 @@ public class UIUtils {
         int currentThreadId = android.os.Process.myTid();
         return MyApplication.mainThreadId == currentThreadId;
     }
+
 }

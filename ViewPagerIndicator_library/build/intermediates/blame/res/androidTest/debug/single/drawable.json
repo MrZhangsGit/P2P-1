@@ -100,11 +100,11 @@
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_ratingbar_full_material.xml"
-    },
-    {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\vpi__tab_indicator.xml",
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\bundles\\debug\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable\\abc_ratingbar_full_material.xml"
     }
 ]

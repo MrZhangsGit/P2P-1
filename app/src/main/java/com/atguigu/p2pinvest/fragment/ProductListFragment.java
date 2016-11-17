@@ -6,7 +6,7 @@ import android.widget.ListView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.atguigu.p2pinvest.R;
-import com.atguigu.p2pinvest.adapter.ProductListAdapter3;
+import com.atguigu.p2pinvest.adapter.ProductListAdapter;
 import com.atguigu.p2pinvest.bean.BaseFragment;
 import com.atguigu.p2pinvest.bean.ProInfo;
 import com.atguigu.p2pinvest.common.AppNetConfig;
@@ -46,8 +46,8 @@ public class ProductListFragment extends BaseFragment {
         }
 
         //方法一
-//        ProductListAdapter productListAdapter = new ProductListAdapter(proInfos);
-//        lvProductList.setAdapter(productListAdapter);
+        ProductListAdapter productListAdapter = new ProductListAdapter(proInfos);
+        lvProductList.setAdapter(productListAdapter);
         //方法二
 //        ProductListAdapter1 productListAdapter1 = new ProductListAdapter1(proInfos);
 //        lvProductList.setAdapter(productListAdapter1);
@@ -55,8 +55,8 @@ public class ProductListFragment extends BaseFragment {
 //        ProductListAdapter2 productListAdapter2 = new ProductListAdapter2(proInfos);
 //        lvProductList.setAdapter(productListAdapter2);
         //方法四
-        ProductListAdapter3 productListAdapter3 = new ProductListAdapter3(proInfos);
-        lvProductList.setAdapter(productListAdapter3);
+//        ProductListAdapter3 productListAdapter3 = new ProductListAdapter3(proInfos);
+//        lvProductList.setAdapter(productListAdapter3);
     }
     @Override
     protected void initTitle() {

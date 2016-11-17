@@ -1,8 +1,6 @@
 package com.atguigu.p2pinvest;
 
-import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
@@ -10,16 +8,15 @@ import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.atguigu.p2pinvest.common.ActivityManager;
+import com.atguigu.p2pinvest.common.BaseActivity;
 import com.atguigu.p2pinvest.fragment.HomeFrangment;
 import com.atguigu.p2pinvest.fragment.InvestFrangment;
 import com.atguigu.p2pinvest.fragment.MeFrangment;
 import com.atguigu.p2pinvest.fragment.SettingFrangment;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends BaseActivity {
 
     @Bind(R.id.fl_main)
     FrameLayout flMain;
@@ -35,29 +32,7 @@ public class MainActivity extends FragmentActivity {
     private FragmentTransaction transaction;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-
-        //添加到activity管理里面
-        ActivityManager.getInstance().add(this);
-
-        //初始化监听
-        initListener();
-
-        //默认选择首页
-        rgMian.check(R.id.rb_main_home);
-
-        //手动空指针---测试抓捕异常的处理类
-//        String[] strings = new String[1];
-//        String str = strings[4];
-
-    }
-
-
-    private void initListener() {
+    protected void initListener() {
         rgMian.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -79,6 +54,24 @@ public class MainActivity extends FragmentActivity {
 
             }
         });
+
+        //默认选择首页
+        rgMian.check(R.id.rb_main_home);
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initTitle() {
+
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
     }
 
     public void setSelect(int select) {

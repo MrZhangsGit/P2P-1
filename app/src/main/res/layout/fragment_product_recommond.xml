@@ -4,11 +4,9 @@
     android:layout_height="match_parent"
     tools:context="com.atguigu.p2pinvest.fragment.ProductRecommondFragment">
 
-    <TextView
+    <com.atguigu.p2pinvest.ui.randomLayout.StellarMap
+        android:id="@+id/stellar_map"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="全部理财"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="30sp"/>
+        android:layout_height="match_parent" />
 
 </FrameLayout>

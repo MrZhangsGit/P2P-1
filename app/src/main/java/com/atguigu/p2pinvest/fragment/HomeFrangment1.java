@@ -31,12 +31,12 @@ package com.atguigu.p2pinvest.fragment;
 //        ButterKnife.bind(this, view);
 //        initTop();
 //        //初始化数据
-//        initData();
+//        initTitle();
 //        return view;
 //    }
 //
 //    //初始化数据
-//    private void initData() {
+//    private void initTitle() {
 //        AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
 //        asyncHttpClient.post(AppNetConfig.INDEX, new AsyncHttpResponseHandler() {
 //            //联网下载成功

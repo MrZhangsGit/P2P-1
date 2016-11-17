@@ -33,7 +33,7 @@ public abstract class BaseFragment extends Fragment {
 //        initTitle();
 //
 //        //初始化数据
-//        initData();
+//        initTitle();
 
         loadingPager = new LoadingPager(getActivity()) {
             @Override

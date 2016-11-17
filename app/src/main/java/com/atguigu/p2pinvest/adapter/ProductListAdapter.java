@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.atguigu.p2pinvest.R;
 import com.atguigu.p2pinvest.bean.ProInfo;
 import com.atguigu.p2pinvest.ui.RoundProgress;
+import com.atguigu.p2pinvest.utils.UIUtils;
 
 import java.util.List;
 
@@ -50,8 +51,23 @@ public class ProductListAdapter extends BaseAdapter {
             convertView = View.inflate(parent.getContext(), R.layout.item_product_list, null);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
-        }else {
+        } else {
             holder = (ViewHolder) convertView.getTag();
+        }
+
+        //分类型listView
+        int itemViewType = getItemViewType(position);
+        if (itemViewType == 0) {
+            TextView textView = new TextView(parent.getContext());
+            textView.setText("与子同有，动辄覆舟");
+            textView.setTextSize(UIUtils.dp2px(10));
+            textView.setTextColor(UIUtils.getColor(R.color.home_back_selected));
+            return textView;
+        }
+
+        //没有的话。position==3的那条信息会消失
+        if (position > 3) {
+            position--;
         }
 
         //获得数据
@@ -87,5 +103,20 @@ public class ProductListAdapter extends BaseAdapter {
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (position == 3) {
+            return 0;
+        } else {
+            return 1;
+        }
+
+    }
+
+    @Override
+    public int getViewTypeCount() {
+        return 2;
     }
 }

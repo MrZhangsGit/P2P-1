@@ -16,16 +16,16 @@
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view.xml"
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
@@ -56,16 +56,16 @@
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_time.xml"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_media.xml"
     },
     {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
@@ -80,12 +80,12 @@
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_radio.xml"
-    },
-    {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
@@ -104,12 +104,12 @@
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_mode_bar.xml"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
@@ -124,12 +124,12 @@
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_lines.xml"
-    },
-    {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_lines.xml"
     },
     {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
