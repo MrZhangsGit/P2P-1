@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.atguigu.p2pinvest.R;
-import com.atguigu.p2pinvest.bean.BaseFragment;
+import com.atguigu.p2pinvest.common.BaseFragment;
 import com.atguigu.p2pinvest.bean.Imags;
 import com.atguigu.p2pinvest.bean.Index;
 import com.atguigu.p2pinvest.bean.ProInfo;
@@ -109,7 +109,7 @@ public class HomeFrangment extends BaseFragment {
                 //设置banner动画效果   Transformer.CubeOut //立体效果
                 banner.setBannerAnimation(Transformer.FlipVertical);
                 //设置标题集合（当banner样式有显示title时）
-                String[] titles = new String[]{"深情不 生", "安心钱包计划，年化6%"};
+                String[] titles = new String[]{"深情不及久伴,加息2%","乐享活计划","破茧重生", "安心钱包计划，年化6%"};
                 banner.setBannerTitles(Arrays.asList(titles));
                 //设置自动轮播，默认为true
                 banner.isAutoPlay(true);
@@ -139,7 +139,7 @@ public class HomeFrangment extends BaseFragment {
                             roundProgress.setProgress(roundProgress.getProgress() + 1);
 
                             //睡眠-模拟进度
-                            SystemClock.sleep(30);
+                            SystemClock.sleep(20);
 
 //                            roundProgress.invalidate();//强制重绘（只能主线程可以用）
                             roundProgress.postInvalidate();//强制重绘（主/分线程都可以）

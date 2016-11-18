@@ -92,12 +92,12 @@
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\release\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_singlechoice_material.xml"
-    },
-    {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\release\\layout\\notification_template_big_media.xml",
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\release\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\release\\layout\\abc_action_bar_title_item.xml",

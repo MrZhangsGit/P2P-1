@@ -5,7 +5,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.atguigu.p2pinvest.R;
-import com.atguigu.p2pinvest.bean.BaseFragment;
+import com.atguigu.p2pinvest.common.BaseFragment;
 import com.loopj.android.http.RequestParams;
 
 import butterknife.Bind;

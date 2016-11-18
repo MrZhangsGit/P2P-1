@@ -136,12 +136,12 @@
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_selected_focused_holo.9.png",
-        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_selected_focused_holo.9.png"
-    },
-    {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
         "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\vpi__tab_selected_focused_holo.9.png",
+        "source": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\src\\main\\res\\drawable-hdpi\\vpi__tab_selected_focused_holo.9.png"
     },
     {
         "merged": "D:\\as_workspace\\P2PInvest\\ViewPagerIndicator_library\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",

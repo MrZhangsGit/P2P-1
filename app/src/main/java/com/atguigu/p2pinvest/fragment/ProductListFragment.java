@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.atguigu.p2pinvest.R;
 import com.atguigu.p2pinvest.adapter.ProductListAdapter;
-import com.atguigu.p2pinvest.bean.BaseFragment;
+import com.atguigu.p2pinvest.common.BaseFragment;
 import com.atguigu.p2pinvest.bean.ProInfo;
 import com.atguigu.p2pinvest.common.AppNetConfig;
 import com.loopj.android.http.RequestParams;

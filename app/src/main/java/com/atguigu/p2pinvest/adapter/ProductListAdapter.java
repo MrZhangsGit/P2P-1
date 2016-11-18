@@ -31,7 +31,7 @@ public class ProductListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return list == null ? 0 : list.size();
+        return list == null ? 0 : list.size() + 1;
     }
 
     @Override

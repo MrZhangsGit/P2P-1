@@ -26,6 +26,7 @@ public class BitmapUtils {
         //绘制一个圆圈：将此圆圈理解为下层图片
         Paint paint = new Paint();
         paint.setAntiAlias(true);
+        //画圆
         canvas.drawCircle(width / 2, width / 2, width / 2, paint);
 
         //设置图片相交情况下的处理方式
@@ -38,7 +39,8 @@ public class BitmapUtils {
 
         return bitmap;
     }
-    //图片的压缩
+
+    //图片的压缩---先压缩，在设置圆形
     public static Bitmap zoom(Bitmap source,float w ,float h){//参数2，3：必须不能声明int
         Matrix matrix = new Matrix();
         matrix.postScale(w / source.getWidth(),h / source.getHeight());
@@ -47,5 +49,7 @@ public class BitmapUtils {
         return bitmap;
 
     }
+
+
 
 }

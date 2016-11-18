@@ -8,7 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.atguigu.p2pinvest.R;
-import com.atguigu.p2pinvest.bean.BaseFragment;
+import com.atguigu.p2pinvest.common.BaseFragment;
 import com.atguigu.p2pinvest.ui.FlowLayout;
 import com.atguigu.p2pinvest.utils.DrawUtils;
 import com.atguigu.p2pinvest.utils.UIUtils;

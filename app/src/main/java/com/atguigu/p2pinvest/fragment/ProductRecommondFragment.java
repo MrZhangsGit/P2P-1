@@ -7,7 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.atguigu.p2pinvest.R;
-import com.atguigu.p2pinvest.bean.BaseFragment;
+import com.atguigu.p2pinvest.common.BaseFragment;
 import com.atguigu.p2pinvest.ui.randomLayout.StellarMap;
 import com.atguigu.p2pinvest.utils.UIUtils;
 import com.loopj.android.http.RequestParams;

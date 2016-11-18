@@ -12,14 +12,20 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.atguigu.p2pinvest.MainActivity;
 import com.atguigu.p2pinvest.R;
+import com.atguigu.p2pinvest.activity.BarChartActivity;
+import com.atguigu.p2pinvest.activity.ChongZhiActivity;
+import com.atguigu.p2pinvest.activity.LineChartActivity;
 import com.atguigu.p2pinvest.activity.LoginActivity;
-import com.atguigu.p2pinvest.bean.BaseFragment;
+import com.atguigu.p2pinvest.activity.PieChartActivity;
+import com.atguigu.p2pinvest.activity.TiXianActivity;
+import com.atguigu.p2pinvest.activity.ToggleButtonActivity;
+import com.atguigu.p2pinvest.activity.UserInfoActivity;
 import com.atguigu.p2pinvest.bean.User;
 import com.atguigu.p2pinvest.common.BaseActivity;
+import com.atguigu.p2pinvest.common.BaseFragment;
 import com.atguigu.p2pinvest.utils.BitmapUtils;
 import com.atguigu.p2pinvest.utils.UIUtils;
 import com.loopj.android.http.RequestParams;
@@ -85,7 +91,7 @@ public class MeFrangment extends BaseFragment {
     @Override
     protected void initTitle() {
         ivTopBack.setVisibility(View.INVISIBLE);
-        ivTopSetting.setVisibility(View.INVISIBLE);
+        ivTopSetting.setVisibility(View.VISIBLE);
         tvTopName.setText("我的资产");
     }
 
@@ -117,14 +123,14 @@ public class MeFrangment extends BaseFragment {
 //        Log.e("TAG", "图片呢-------------" + user.UF_AVATAR_URL);
 
         //如果在本地存储了用户头像，则优先从本地获取
-        if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             File externalFilesDir = this.getActivity().getExternalFilesDir(null);
-            File file = new File(externalFilesDir,"icon.png");
-            if(file.exists()){
+            File file = new File(externalFilesDir, "icon.png");
+            if (file.exists()) {
                 //存在图片
                 Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
                 imageView1.setImageBitmap(bitmap);
-                return;
+                return;//如果内存有，就不联网下载啦，这在实际开发中是不行的，要不就下载不了更新的头像信息
             }
         }
 
@@ -168,17 +174,47 @@ public class MeFrangment extends BaseFragment {
                 .show();
     }
 
+    //设置按钮  改变用户头像界面（包括退出）
+    @OnClick(R.id.iv_top_setting)
+    public void changeUserIcon(View view) {
+        ((BaseActivity) this.getActivity()).startNewActivity(UserInfoActivity.class, null);
+    }
+
     //充值按钮
     @OnClick(R.id.recharge)
     public void onRecharge(View view) {
-        Toast.makeText(getActivity(), "充值按钮", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), "充值按钮", Toast.LENGTH_SHORT).show();
+        ((BaseActivity) this.getActivity()).startNewActivity(ChongZhiActivity.class, null);
     }
 
     //提现按钮
     @OnClick(R.id.withdraw)
     public void onWithdraw(View view) {
-        Toast.makeText(getActivity(), "提现按钮", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), "提现按钮", Toast.LENGTH_SHORT).show();
+        ((BaseActivity) this.getActivity()).startNewActivity(TiXianActivity.class, null);
     }
 
+    //折线图Demo
+    @OnClick(R.id.ll_touzi)
+    public void showLineChart(View view){
+        ((BaseActivity)this.getActivity()).startNewActivity(LineChartActivity.class, null);
+    }
+
+    //柱状图Demo
+    @OnClick(R.id.ll_touzi_zhiguan)
+    public void showBarChart(View view){
+        ((BaseActivity)this.getActivity()).startNewActivity(BarChartActivity.class, null);
+    }
+
+    //饼状图Demo
+    @OnClick(R.id.ll_zichang)
+    public void showPieChart(View view){
+        ((BaseActivity)this.getActivity()).startNewActivity(PieChartActivity.class, null);
+    }
+
+    @OnClick(R.id.ll_zhanquan)
+    public void showToggleButton(View view){
+        ((BaseActivity)this.getActivity()).startNewActivity(ToggleButtonActivity.class, null);
+    }
 
 }
