@@ -139,7 +139,7 @@ public class HomeFrangment extends BaseFragment {
                             roundProgress.setProgress(roundProgress.getProgress() + 1);
 
                             //睡眠-模拟进度
-                            SystemClock.sleep(20);
+                            SystemClock.sleep(5);
 
 //                            roundProgress.invalidate();//强制重绘（只能主线程可以用）
                             roundProgress.postInvalidate();//强制重绘（主/分线程都可以）

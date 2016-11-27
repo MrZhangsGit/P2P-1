@@ -9,8 +9,8 @@ package com.atguigu.p2pinvest.common;
 public class AppNetConfig {
 
     //本地ip
-//    private static final String HOST = "192.168.1.144";
-    private static final String HOST = "192.168.191.1";
+    private static final String HOST = "192.168.1.144";
+//    private static final String HOST = "192.168.191.1";
 //    private static final String HOST = "192.168.31.209";
 
     //访问服务器的base_url
@@ -27,5 +27,8 @@ public class AppNetConfig {
 
     //测试
     public static final String TEST = BASE_URL + "test";
+
+    //访问服务器端当前应用的版本信息
+    public static final String UPDATE = BASE_URL + "update.json";//访问服务器端当前应用的版本信息
 
 }

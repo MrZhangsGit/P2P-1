@@ -1,8 +1,10 @@
 package com.atguigu.p2pinvest;
 
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
@@ -61,7 +63,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-
+        //1 注册
+//        EventBus.getDefault().register(this);
     }
 
     @Override
@@ -140,9 +143,34 @@ public class MainActivity extends BaseActivity {
     private Handler handler = new Handler();
     private boolean isOut = true;
 
+    //判断是否是手势密界面
+    public boolean isPassWorld = false;
+
+//    @Subscribe(threadMode = ThreadMode.MAIN)
+//    public void onThread(String event) {
+//        isPassWorld = true;
+//        Log.d("harvic", "onThread收到了消息：" + event.toString());
+//    }
+
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
+
+        //判断当前是否是手势密码activity
+//        isPassWorld = ActivityManager.getInstance().getCurrentActivity() instanceof BaseActivity ? true : false;
+
+        Log.e("TAG", "bbbbbbbbbbbbbbbb-----" + isPassWorld);
+
+        SharedPreferences sp = this.getSharedPreferences("pwd", MODE_PRIVATE);
+        boolean isPassWorld = sp.getBoolean("mima", false);
+
+        if (isPassWorld) {//是
+//            isPassWorld = false;
+            sp.edit().putBoolean("mima", false).commit();
+            return true;
+        }
+
         if (keyCode == KeyEvent.KEYCODE_BACK && isOut) {
+
             Toast.makeText(MainActivity.this, "在点一次就退出", Toast.LENGTH_SHORT).show();
             isOut = false;
             handler.postDelayed(new Runnable() {
@@ -162,5 +190,8 @@ public class MainActivity extends BaseActivity {
     protected void onDestroy() {
         super.onDestroy();
         handler.removeCallbacksAndMessages(null);
+
+        //解注册
+//        EventBus.getDefault().unregister(this);
     }
 }

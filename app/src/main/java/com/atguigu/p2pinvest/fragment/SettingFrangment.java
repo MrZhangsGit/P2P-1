@@ -1,6 +1,9 @@
 package com.atguigu.p2pinvest.fragment;
 
+import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -9,6 +12,7 @@ import com.atguigu.p2pinvest.common.BaseFragment;
 import com.loopj.android.http.RequestParams;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by 颜银 on 2016/11/11.
@@ -24,6 +28,8 @@ public class SettingFrangment extends BaseFragment {
     TextView tvTopName;
     @Bind(R.id.iv_top_setting)
     ImageView ivTopSetting;
+    @Bind(R.id.tv_content)
+    TextView tvContent;
 
     @Override
     protected RequestParams getParams() {
@@ -37,7 +43,12 @@ public class SettingFrangment extends BaseFragment {
 
     @Override
     protected void initData(String content) {
-
+        //为了使得当前的textView获取焦点
+        //方式一：
+        tvContent.setFocusable(true);
+        tvContent.setFocusableInTouchMode(true);
+        tvContent.requestFocus();
+        //方式二：提供TextView的子视图，同时重写isFocus()
     }
 
     @Override
@@ -50,5 +61,19 @@ public class SettingFrangment extends BaseFragment {
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_setting;
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, rootView);
+        return rootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
     }
 }

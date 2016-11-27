@@ -42,7 +42,7 @@ public class BarChartActivity extends BaseActivity {
     @Override
     protected void initData() {
 
-        mTf = Typeface.createFromAsset(this.getAssets(), "OpenSans-Regular.ttf");
+        mTf = Typeface.createFromAsset(this.getAssets(), "OpenSans-Regular.ttf");//自定义显示字体
         // apply styling
         chartBarChart.setDescription("每月人数");//柱状图描述
         chartBarChart.setDrawGridBackground(false);

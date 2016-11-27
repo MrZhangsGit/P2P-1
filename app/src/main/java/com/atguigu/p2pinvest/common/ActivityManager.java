@@ -60,6 +60,10 @@ public class ActivityManager {
         }
     }
 
+    public Activity getCurrentActivity(){
+        return activityStack.lastElement();
+    }
+
     /**
      * 移除当前activity
      */

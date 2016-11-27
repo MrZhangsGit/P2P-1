@@ -62,10 +62,10 @@ public class UserInfoActivity extends BaseActivity {
     @Override
     protected void initData() {
         //开始显示上次修改信息，没有
-        if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             File externalFilesDir = this.getExternalFilesDir(null);
-            File file = new File(externalFilesDir,"icon.png");
-            if(file.exists()){
+            File file = new File(externalFilesDir, "icon.png");
+            if (file.exists()) {
                 //存在图片
                 Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
                 imageView1.setImageBitmap(bitmap);
@@ -89,33 +89,46 @@ public class UserInfoActivity extends BaseActivity {
 
     //点击返回按钮
     @OnClick(R.id.iv_top_back)
-    public void setIvTopBack(View view){
+    public void setIvTopBack(View view) {
 
         //销毁当前Activity,重新进入
-        this.removeAllActivity();
-        this.startNewActivity(MainActivity.class, null);
+        UserInfoActivity.this.removeAllActivity();
+        UserInfoActivity.this.startNewActivity(MainActivity.class, null);
     }
 
     //点击退出登录按钮
     @OnClick(R.id.loginout)
-    public void logout(View view){
-        //推出之前，清空内存信息
-        SharedPreferences sp = this.getSharedPreferences("user_info",MODE_PRIVATE);
-        sp.edit().clear().commit();//清空内存
+    public void logout(View view) {
 
-        //清楚头像信息
-        if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
-            File externalFilesDir = this.getExternalFilesDir(null);
-            File file = new File(externalFilesDir,"icon.png");
-            if(file.exists()){
-                //存在图片
-                file.delete();//删除文件
-            }
-        }
+        new AlertDialog.Builder(this)
+                .setTitle("退出登录")
+                .setMessage("你确定吗？")
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //推出之前，清空内存信息
+                        SharedPreferences sp = UserInfoActivity.this.getSharedPreferences("user_info", MODE_PRIVATE);
+                        sp.edit().clear().commit();//清空内存
 
-        //销毁当前Activity，重新进入
-        this.removeAllActivity();
-        this.startNewActivity(MainActivity.class,null);
+                        //清楚头像信息
+                        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                            File externalFilesDir = UserInfoActivity.this.getExternalFilesDir(null);
+                            File file = new File(externalFilesDir, "icon.png");
+                            if (file.exists()) {
+                                //存在图片
+                                file.delete();//删除文件
+                            }
+                        }
+
+                        //销毁当前Activity，重新进入
+                        UserInfoActivity.this.removeAllActivity();
+                        UserInfoActivity.this.startNewActivity(MainActivity.class, null);
+                    }
+                })
+                .setNegativeButton("取消", null)
+                .show();
+
+
     }
 
     //点击更换头头像按钮
@@ -123,7 +136,7 @@ public class UserInfoActivity extends BaseActivity {
     public void changeIcon(View view) {
         new AlertDialog.Builder(this)
                 .setTitle("选择路径")
-                .setItems(new String[]{"相机", "图库"},new DialogInterface.OnClickListener() {
+                .setItems(new String[]{"相机", "图库"}, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {//点击回调
                         switch (which) {
@@ -146,6 +159,7 @@ public class UserInfoActivity extends BaseActivity {
 
     /**
      * 点击回调，保存头像图片的方法
+     *
      * @param requestCode
      * @param resultCode
      * @param data
@@ -156,7 +170,7 @@ public class UserInfoActivity extends BaseActivity {
 
         String path = getCacheDir() + "/tx.png";
 
-        if(requestCode == CAMERA && resultCode == RESULT_OK && data!=null){//相机回调
+        if (requestCode == CAMERA && resultCode == RESULT_OK && data != null) {//相机回调
             //拍照
             Bundle bundle = data.getExtras();
             // 获取相机返回的数据，并转换为图片格式
@@ -178,7 +192,7 @@ public class UserInfoActivity extends BaseActivity {
             }
 
 
-        }else if(requestCode == PICTURE && resultCode == RESULT_OK && data!=null){//相册回调
+        } else if (requestCode == PICTURE && resultCode == RESULT_OK && data != null) {//相册回调
             Uri selectedImage = data.getData();
 
             //这里返回的uri情况就有点多了
@@ -192,7 +206,7 @@ public class UserInfoActivity extends BaseActivity {
             //就需要针对各种情况进行一个处理了
             String pathResult = getPath(selectedImage);
 
-            if(!TextUtils.isEmpty(path)){//路径存在-->文件存在
+            if (!TextUtils.isEmpty(path)) {//路径存在-->文件存在
 
                 Bitmap bitmap = BitmapFactory.decodeFile(pathResult);
                 //先执行压缩图片
@@ -203,7 +217,7 @@ public class UserInfoActivity extends BaseActivity {
                 try {
                     FileOutputStream fos = new FileOutputStream(path);
                     //保存到内存中 保存路径为  path
-                    circleBitmap.compress(Bitmap.CompressFormat.PNG,100,fos);
+                    circleBitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
                     //真实项目当中，是需要上传到服务器的..这步我们就不做了。
                     imageView1.setImageBitmap(circleBitmap);
 
@@ -220,14 +234,13 @@ public class UserInfoActivity extends BaseActivity {
 
     //将修改后的图片保存在本地存储中：storage/sdcard/Android/data/应用包名/files/xxx.png
     private void saveImage(Bitmap circleBitmap) throws FileNotFoundException {
-        if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             File externalFilesDir = this.getExternalFilesDir(null);
             File file = new File(externalFilesDir, "icon.png");
             //将Bitmap持久化
-            circleBitmap.compress(Bitmap.CompressFormat.PNG,100,new FileOutputStream(file));
+            circleBitmap.compress(Bitmap.CompressFormat.PNG, 100, new FileOutputStream(file));
         }
     }
-
 
 
     /**

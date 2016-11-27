@@ -31,6 +31,9 @@
         android:theme="@style/AppTheme">
 
         <!-- android:theme="@style/StyledIndicators" -->
+        <activity android:name=".activity.GestureVerifyActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.GestureEditActivity"/>
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -46,6 +49,7 @@
         <activity android:name=".activity.UserInfoActivity" />
         <activity android:name=".activity.ChongZhiActivity" />
         <activity android:name=".activity.TiXianActivity" />
+        <!-- 支付宝SDK  -->
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
@@ -59,7 +63,7 @@
         <activity android:name=".activity.LineChartActivity" />
         <activity android:name=".activity.BarChartActivity" />
         <activity android:name=".activity.PieChartActivity" />
-        <activity android:name=".activity.ToggleButtonActivity"></activity>
+        <activity android:name=".activity.AccountSafeActivity" />
     </application>
 
 </manifest>

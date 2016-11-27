@@ -6,11 +6,22 @@
 
     <include layout="@layout/common_top" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="设置"
-        android:textColor="@color/home_back_selected"
-        android:textSize="40sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.atguigu.p2pinvest.ui.MyTextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:text="愿得一心人，白首不分离，原有情人终成眷属！"
+            android:textColor="@color/home_back_selected"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+
 
 </LinearLayout>

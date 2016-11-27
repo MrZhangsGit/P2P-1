@@ -15,13 +15,14 @@ import android.widget.TextView;
 
 import com.atguigu.p2pinvest.MainActivity;
 import com.atguigu.p2pinvest.R;
+import com.atguigu.p2pinvest.activity.AccountSafeActivity;
 import com.atguigu.p2pinvest.activity.BarChartActivity;
 import com.atguigu.p2pinvest.activity.ChongZhiActivity;
+import com.atguigu.p2pinvest.activity.GestureVerifyActivity;
 import com.atguigu.p2pinvest.activity.LineChartActivity;
 import com.atguigu.p2pinvest.activity.LoginActivity;
 import com.atguigu.p2pinvest.activity.PieChartActivity;
 import com.atguigu.p2pinvest.activity.TiXianActivity;
-import com.atguigu.p2pinvest.activity.ToggleButtonActivity;
 import com.atguigu.p2pinvest.activity.UserInfoActivity;
 import com.atguigu.p2pinvest.bean.User;
 import com.atguigu.p2pinvest.common.BaseActivity;
@@ -71,6 +72,7 @@ public class MeFrangment extends BaseFragment {
     TextView llZichang;
     @Bind(R.id.ll_zhanquan)
     TextView llZhanquan;
+    private SharedPreferences sp;
 
     @Override
     protected RequestParams getParams() {
@@ -84,6 +86,7 @@ public class MeFrangment extends BaseFragment {
 
     @Override
     protected void initData(String content) {
+        sp = this.getActivity().getSharedPreferences("secret_protect", Context.MODE_PRIVATE);
         isLogin();
     }
 
@@ -112,6 +115,15 @@ public class MeFrangment extends BaseFragment {
 
     //得到了本地的登录信息，加载显示
     private void doUser() {
+
+
+        //如果在本地fanx发现用户设置过手势密码，则在此时验证
+        boolean isOpen = sp.getBoolean("isOpen", false);
+        if(isOpen){//存在手势识别器
+            ((BaseActivity)this.getActivity()).startNewActivity(GestureVerifyActivity.class, null);
+        }
+
+
         //内存中获取用户信息
         User user = ((MainActivity) MeFrangment.this.getActivity()).readUser();
 
@@ -155,6 +167,8 @@ public class MeFrangment extends BaseFragment {
                 return "";//此方法不能返回null.否则报异常
             }
         }).into(imageView1);
+
+
     }
 
     //未发现登录信息，提示用户登录的Dialog
@@ -214,7 +228,8 @@ public class MeFrangment extends BaseFragment {
 
     @OnClick(R.id.ll_zhanquan)
     public void showToggleButton(View view){
-        ((BaseActivity)this.getActivity()).startNewActivity(ToggleButtonActivity.class, null);
+        ((BaseActivity)this.getActivity()).startNewActivity(AccountSafeActivity.class, null);
     }
+
 
 }
